@@ -1,0 +1,52 @@
+h2 {
+  color: #C2F4FC;
+  text-align: center;
+}
+
+.home img {
+  position: absolute;
+  margin-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.45;
+}
+
+.lightning img {
+  position: absolute;
+  margin-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.2;
+}
+
+.wild img {
+  position: absolute;
+  margin-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.2;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+}
+
+.row {
+  background-color: #435454;
+}
+
+a {
+  background-color: #C2F4FC;
+  color: #000000;
+}
+
+td {
+  opacity: 0.7;
+}

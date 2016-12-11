@@ -1,0 +1,37 @@
+<div class="lightning">
+  <img src="../../images/lightning.png"/>
+  <table>
+  <thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Contract Terms</th>
+      <th>Position</th>
+      <th>Status</th>
+      <th>Age</th>
+      <th>2016-2017 AAV</th>
+      <th>2017-2018 AAV</th>
+      <th>2018-2019 AAV</th>
+      <th>2019-2020 AAV</th>
+      <th>2020-2021 AAV</th>
+      <th>2021-2022 AAV</th>
+      <th>2022-2023 AAV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class='player' ng-repeat='player in lightning.lightningPlayers'>
+      <td><input type="text" name="name" ng-model="player.name" class='form-control col-md-1'></td>
+      <td><input type="text" name="contract_terms" ng-model="player.contract_terms" class='form-control col-md-1'></td>
+      <td><input type="text" name="position" ng-model="player.position" class='form-control col-md-1'></td>
+      <td><input type="text" name="status" ng-model="player.status" class='form-control col-md-1'></td>
+      <td><input type="text" name="age" ng-model="player.age" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_sixteen_seventeen" ng-model="player.AAV_sixteen_seventeen" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_seventeen_eighteen" ng-model="player.AAV_seventeen_eighteen" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_eighteen_nineteen" ng-model="player.AAV_eighteen_nineteen" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_nineteen_twenty" ng-model="player.AAV_nineteen_twenty" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_twenty_twentyone" ng-model="player.AAV_twenty_twentyone" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_twentyone_twentytwo" ng-model="player.AAV_twentyone_twentytwo" class='form-control col-md-1'></td>
+      <td><input type="text" name="AAV_twentytwo_twentythree" ng-model="player.AAV_twentytwo_twentythree" class='form-control col-md-1'></td>
+    </tr>
+  </tbody>
+</table>
+</div>
