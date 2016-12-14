@@ -1,14 +1,26 @@
 myApp.controller('TradeController', ['$scope', 'teamFactory', function($scope, teamFactory) {
 
-var salaryCap = 73000000;
-var rosterLimit =
+var self = this;
+self.salaryCap = 73000000;
+self.teams = null;
+// var rosterLimit =
 
 console.log('trade controller running');
 
-$scope.teamFactory = teamFactory;
-$scope.teams = $scope.teamFactory.teamArray;
+teamFactory.getInfo()
+  .then(function(teams) {
+    console.log(teams);
+    self.teams = teams;
+  });
 
-$scope.teamFactory.getInfo();
+teamFactory.getPlayerInfo()
+    .then(function(players) {
+      console.log(players);
+      self.players = players;
+    });
+
+
+// console.log($scope.teams);
 
 // if (contract_terms == "NMC" || contract_terms == "NTC") {
 //   alert("You cannot trade a player with a No Move Clause or a No Trade Clause.")

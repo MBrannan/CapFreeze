@@ -4,18 +4,27 @@ myApp.factory('teamFactory', ['$http', function($http) {
 
   //declare function
   function getTeams() {
-    $http.get('/factory')
+    return $http.get('/factory')
       .then(function(response) {
         teams = response.data;
-        console.log(teams);
         return teams;
       });
   };
 
+  function getPlayers() {
+    var teamId = 15;
+    return $http.get('/players/' + teamId)
+      .then(function(response) {
+        players = response.data;
+        return players
+      });
+  };
   return {
-    teamArray: teams,
     getInfo: function() {
       return getTeams();
+    },
+    getPlayerInfo: function() {
+      return getPlayers();
     }
   };
 }]);

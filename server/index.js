@@ -6,6 +6,7 @@ var wild = require('./routes/wild');
 var lightning = require('./routes/lightning');
 var trade = require('./routes/trade');
 var factory = require('./routes/factory');
+var players = require('./routes/players');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,6 +16,7 @@ app.use('/wild', wild);
 app.use('/lightning', lightning);
 app.use('/trade', trade);
 app.use('/factory', factory);
+app.use('/players', players);
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('./public/views/index.html'));

@@ -23,6 +23,16 @@ h2 {
   opacity: 0.2;
 }
 
+.trade img {
+  position: absolute;
+  margin-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.2;
+}
+
 .wild img {
   position: absolute;
   margin-top: 40px;

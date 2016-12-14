@@ -1,8 +1,11 @@
-<div>
+<div class="trade">
+  <img src="../../images/nhlshield.png"/>
   <div class="col-md-6">
-    <!-- <input placeholder="Team Id" ng-model="trade."> -->
-  <select ng-model="teams" ng-options="$scope.teamFactory.getInfo()">
-  </select>
+    <select ng-model="teamOne" ng-options="teams.name for teams in trade.teams" ng-change="getPlayerInfo()">
+    </select>
+
+<!-- <h2>{{ trade.salaryCap }}</h2> -->
+<!-- <li ng-repeat="player in teams"></li> -->
 
 <table>
 <thead>
@@ -22,13 +25,13 @@
     <td>{{ player.position }}</td>
     <td>{{ player.AAV_sixteen_seventeen }}</td>
     <td>{{ player.AAV_seventeen_eighteen }}</td>
-    <td><input type="text" name="AAV_eighteen_nineteen" ng-model="player.AAV_eighteen_nineteen" class='form-control col-md-1'></td>
+    <td>{{ player.AAV_eighteen_nineteen }}</td>
   </tr>
 </tbody>
 </div>
 
 <div class="col-md-6">
-  <select ng-model="teams" ng-options="teams.name for teams in teams">
+  <select ng-model="teamTwo" ng-options="teams.name for teams in trade.teams" ng-change=>
   </select>
 </div>
 
