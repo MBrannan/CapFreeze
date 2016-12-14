@@ -18,6 +18,11 @@ myApp.config(['$routeProvider', function($routeProvider) {
       controller: 'LightningController',
       controllerAs: 'lightning'
     })
+    .when('/trade', {
+      templateUrl: '/views/templates/trade.html',
+      controller: 'TradeController',
+      controllerAs: 'trade'
+    })
     .otherwise({
       redirectTo: '/home'
     });
@@ -68,3 +73,19 @@ myApp.controller('LightningController', ['$http', function($http) {
     };
 
 }]);
+
+// myApp.controller('TradeController', ['$http', function($http) {
+//   console.log('trade controller running');
+//   var self = this;
+//   var salaryCap = 73000000;
+//   self.tradePlayers = [];
+//
+//   self.getTradeData = function() {
+//     $http.get('/trade')
+//       .then(function(response) {
+//         self.tradePlayers = response.data;
+//         console.log(self.tradePlayers);
+//       });
+//   };
+// 
+// }]);

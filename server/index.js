@@ -4,6 +4,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var wild = require('./routes/wild');
 var lightning = require('./routes/lightning');
+var trade = require('./routes/trade');
+var factory = require('./routes/factory');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,6 +13,8 @@ app.use(bodyParser.json());
 
 app.use('/wild', wild);
 app.use('/lightning', lightning);
+app.use('/trade', trade);
+app.use('/factory', factory);
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('./public/views/index.html'));

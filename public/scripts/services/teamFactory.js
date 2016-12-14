@@ -1,8 +1,21 @@
-myApp.factory('TeamFactory', [function() {
+myApp.factory('teamFactory', ['$http', function($http) {
   console.log('team factory running');
-  var teams = ['Anaheim Ducks', 'Arizona Coyotes', 'Boston Bruins', 'Buffalo Sabres', 'Calgary Flames', 'Carolina Hurricanes', 'Chicago Blackhawks', 'Colorado Avalanche', 'Columbus Blue Jackets', 'Dallas Stars', +
-  'Detroit Red Wings', 'Edmonton Oilers', 'Florida Panthers', 'Los Angeles Kings', 'Minnesota Wild', 'Montreal Canadiens', 'Nashville Predators', 'New Jersey Devils', 'New York Islanders', 'New York Rangers' +
-  'Ottawa Senators', 'Philadelphia Flyers', 'Pittsburgh Penguins', 'San Jose Sharks', 'Saint Louis Blues', 'Tampa Bay Lightning', 'Toronto Maple Leafs', 'Vancouver Canucks', 'Washington Capitals', 'Winnipeg Jets'];
+  var teams = [];
 
-  return teams;
+  //declare function
+  function getTeams() {
+    $http.get('/factory')
+      .then(function(response) {
+        teams = response.data;
+        console.log(teams);
+        return teams;
+      });
+  };
+
+  return {
+    teamArray: teams,
+    getInfo: function() {
+      return getTeams();
+    }
+  };
 }]);

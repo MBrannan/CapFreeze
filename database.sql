@@ -1,3 +1,43 @@
+CREATE TABLE teams(
+id SERIAL PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+team_id INTEGER);
+
+INSERT INTO teams(name, team_id)
+VALUES('Anaheim Ducks', 1),
+('Arizona Coyotes', 2),
+('Boston Bruins', 3),
+('Buffalo Sabres', 4),
+('Calgary Flames', 5),
+('Carolina Hurricanes', 6),
+('Chicago Blackhawks', 7),
+('Colorado Avalanche', 8),
+('Columbus Blue Jackets', 9),
+('Dallas Stars', 10),
+('Detroit Red Wings', 11),
+('Edmonton Oilers', 12),
+('Florida Panthers', 13),
+('Los Angeles Kings', 14),
+('Minnesota Wild', 15),
+('Montreal Canadiens', 16),
+('Nashville Predators', 17),
+('New Jersey Devils', 18),
+('New York Islanders', 19),
+('New York Rangers', 20),
+('Ottawa Senators', 21),
+('Philadelphia Flyers', 22),
+('Pittsburgh Penguins', 23),
+('San Jose Sharks', 24),
+('Saint Louis Blues', 25),
+('Tampa Bay Lightning', 26),
+('Toronto Maple Leafs', 27),
+('Vancouver Canucks', 28),
+('Washington Capitals', 29),
+('Winnipeg Jets', 30);
+
+SELECT *
+FROM teams;
+
 CREATE table players(
 id SERIAL PRIMARY KEY,
 Name VARCHAR(40) NOT NULL,
@@ -6,18 +46,18 @@ contract_terms VARCHAR(30),
 position VARCHAR(10),
 status VARCHAR(30),
 age VARCHAR(3),
-"AAV_2016/17" VARCHAR(15),
-"AAV_2017/18" VARCHAR(15),
-"AAV_2018/19" VARCHAR(15),
-"AAV_2019/20" VARCHAR(15),
-"AAV_2020/21" VARCHAR(15),
-"AAV_2021/22" VARCHAR(15),
-"AAV_2022/23" VARCHAR(15)
+"AAV_sixteen_seventeen" VARCHAR(15),
+"AAV_seventeen_eighteen" VARCHAR(15),
+"AAV_eighteen_nineteen" VARCHAR(15),
+"AAV_nineteen_twenty" VARCHAR(15),
+"AAV_twenty_twentyone" VARCHAR(15),
+"AAV_twentyone_twentytwo" VARCHAR(15),
+"AAV_twentytwo_twentythree" VARCHAR(15)
 );
 
 DROP TABLE players;
 
-INSERT into players(name, team_id, contract_terms, position, status, age, "AAV_2016/17", "AAV_2017/18", "AAV_2018/19", "AAV_2019/20", "AAV_2020/21", "AAV_2021/22", "AAV_2022/23")
+INSERT into players(name, team_id, contract_terms, position, status, age, "AAV_sixteen_seventeen", "AAV_seventeen_eighteen", "AAV_eighteen_nineteen", "AAV_nineteen_twenty", "AAV_twenty_twentyone", "AAV_twentyone_twentytwo", "AAV_twentytwo_twentythree")
 VALUES('Abdelkader, Justin', '11', 'NTC', 'LW, RW', 'IR', '29', '4250000', '4250000', '4250000', '4250000', '4250000', '4250000', '4250000'),
 ('Aho, Sebastian', '6', 'EL', 'LW', 'NHL', '19', '925000', '925000', '925000', 'RFA', 'RFA', 'RFA', 'RFA'),
 ('Allen, Jake', '25', '', 'G', 'NHL', '26', '2350000', '4350000', '4350000', '4350000', '4350000', 'UFA', 'UFA'),
@@ -126,7 +166,7 @@ VALUES('Abdelkader, Justin', '11', 'NTC', 'LW, RW', 'IR', '29', '4250000', '4250
 ('Clifford, Kyle', '14', '', 'C', 'NHL', '25', '1600000', '1600000', '1600000', '1600000', 'UFA', 'UFA', 'UFA'),
 ('Clowe, Ryane', '18', 'NMC', 'LW, RW', 'IR', '34', '4850000', '4850000', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA'),
 ('Clune, Rich', '17', '', '', '', '', '283333', '', '', '', '', '', ''),
-('Clutterbuck, Cal', '19', '', 'RW', 'NHL', '29', '2750000', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA'),
+('Clutterbuck, Cal', '19', '', 'RW', 'NHL', '29', '2750000', '3500000', '3500000', '3500000', '3500000', '3500000', 'UFA'),
 ('Coburn, Braydon', '26', 'NTC', 'D', 'NHL', '31', '3700000', '3700000', '3700000', 'UFA', 'UFA', 'UFA', 'UFA'),
 ('Cogliano, Andrew', '1', 'M-NTC', 'LW, RW, C', 'NHL', '29', '3000000', '3000000', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA'),
 ('Colborne, Joe', '8', '', 'C, LW, RW', 'NHL', '26', '2500000', '2500000', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA'),
@@ -397,7 +437,7 @@ VALUES('Abdelkader, Justin', '11', 'NTC', 'LW, RW', 'IR', '29', '4250000', '4250
 ('Kronwall, Niklas', '11', 'NTC', 'D', 'NHL', '35', '4750000', '4750000', '4750000', 'UFA', 'UFA', 'UFA', 'UFA'),
 ('Krug, Torey', '3', '', 'D', 'NHL', '25', '5250000', '5250000', '5250000', '5250000', 'UFA', 'UFA', 'UFA'),
 ('Kruger, Marcus', '7', '', 'C', 'NHL', '26', '3083333', '3083333', '3083333', 'UFA', 'UFA', 'UFA', 'UFA'),
-('Kucherov, Nikita', '26', '', 'RW', 'NHL', '23', '4766667', '4766667', '4766667', 'RFA', '', '', ''),
+('Kucherov, Nikita', '26', '', 'RW', 'NHL', '23', '4766667', '4766667', '4766667', 'RFA', 'RFA', 'RFA', 'RFA'),
 ('Kuemper, Darcy', '15', '', 'G', 'NHL', '26', '1550000', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA', 'UFA'),
 ('Kuhnhackl, Tom', '23', '', 'RW', 'NHL', '24', '625000', '625000', 'RFA', 'RFA', 'RFA', 'RFA', 'RFA'),
 ('Kulak, Brett', '5', 'EL', 'D', 'NHL', '22', '656667', 'RFA', 'RFA', 'RFA', 'RFA', 'RFA', 'RFA'),
@@ -813,4 +853,5 @@ VALUES('Abdelkader, Justin', '11', 'NTC', 'LW, RW', 'IR', '29', '4250000', '4250
 
 
 Select *
-FROM players;
+FROM players
+JOIN teams ON teams.team_id = players.team_id;

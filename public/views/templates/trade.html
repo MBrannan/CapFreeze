@@ -1,0 +1,56 @@
+<div>
+  <div class="col-md-6">
+    <!-- <input placeholder="Team Id" ng-model="trade."> -->
+  <select ng-model="teams" ng-options="$scope.teamFactory.getInfo()">
+  </select>
+
+<table>
+<thead>
+  <tr>
+    <th>Player Name</th>
+    <th>Contract Terms</th>
+    <th>Position</th>
+    <th>2016-2017 AAV</th>
+    <th>2017-2018 AAV</th>
+    <th>2018-2019 AAV</th>
+  </tr>
+</thead>
+<tbody>
+  <tr class='player' ng-repeat='player in trade.tradePlayers'>
+    <td>{{ player.name }}</td>
+    <td>{{ player.contract_terms }}</td>
+    <td>{{ player.position }}</td>
+    <td>{{ player.AAV_sixteen_seventeen }}</td>
+    <td>{{ player.AAV_seventeen_eighteen }}</td>
+    <td><input type="text" name="AAV_eighteen_nineteen" ng-model="player.AAV_eighteen_nineteen" class='form-control col-md-1'></td>
+  </tr>
+</tbody>
+</div>
+
+<div class="col-md-6">
+  <select ng-model="teams" ng-options="teams.name for teams in teams">
+  </select>
+</div>
+
+<table>
+<thead>
+  <tr>
+    <th>Player Name</th>
+    <th>Contract Terms</th>
+    <th>Position</th>
+    <th>2016-2017 AAV</th>
+    <th>2017-2018 AAV</th>
+    <th>2018-2019 AAV</th>
+  </tr>
+</thead>
+<tbody>
+  <tr class='player' ng-repeat='player in trade.tradePlayers'>
+    <td>{{ player.name }}</td>
+    <td>{{ player.contract_terms }}</td>
+    <td>{{ player.position }}</td>
+    <td>{{ player.AAV_sixteen_seventeen }}</td>
+    <td>{{ player.AAV_seventeen_eighteen }}</td>
+    <td>{{ player.AAV_eighteen_nineteen }}</td>
+  </tr>
+</tbody>
+</div>
