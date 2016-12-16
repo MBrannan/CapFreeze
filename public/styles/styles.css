@@ -1,5 +1,5 @@
 h2 {
-  color: #C2F4FC;
+  color: #368BC1;
   text-align: center;
 }
 
@@ -10,7 +10,7 @@ h2 {
   top: 0;
   width: 100%;
   height: auto;
-  opacity: 0.45;
+  opacity: 0.3;
 }
 
 .lightning img {
@@ -20,7 +20,7 @@ h2 {
   top: 0;
   width: 100%;
   height: auto;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 .trade img {
@@ -30,7 +30,7 @@ h2 {
   top: 0;
   width: 100%;
   height: auto;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 .wild img {
@@ -40,7 +40,7 @@ h2 {
   top: 0;
   width: 100%;
   height: auto;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 nav {
@@ -53,10 +53,27 @@ nav {
 }
 
 a {
-  background-color: #C2F4FC;
+  background-color: #368BC1;
   color: #000000;
 }
 
+th {
+  text-align: center;
+  border: 1px solid black;
+}
+
 td {
-  opacity: 0.7;
+  opacity: 0.8;
+  text-align: center;
+  border: 1px solid black;
+}
+
+table {
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+#tradeExecute {
+  background-color: #368BC1;
 }

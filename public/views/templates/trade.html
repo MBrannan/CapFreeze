@@ -1,59 +1,93 @@
 <div class="trade">
   <img src="../../images/nhlshield.png"/>
   <div class="col-md-6">
-    <select ng-model="teamOne" ng-options="teams.name for teams in trade.teams" ng-change="getPlayerInfo()">
+    <select ng-model="trade.teamOne" ng-options="teams.name for teams in trade.teams" ng-change="trade.getPlayerOne()">
+      <option value="">Select a Team</option>
     </select>
 
-<!-- <h2>{{ trade.salaryCap }}</h2> -->
-<!-- <li ng-repeat="player in teams"></li> -->
+    <table>
+      <thead>
+        <tr>
+          <th>Select for Trade</th>
+          <th>Player Name</th>
+          <th>Contract Terms</th>
+          <th>Position</th>
+          <th>2016-2017 AAV</th>
+          <th>2017-2018 AAV</th>
+          <th>2018-2019 AAV</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='player' ng-repeat='player in trade.playersOne'>
+          <td><input type="checkbox" ng-model="player.onBlock" ng-change="trade.pushToTrade()"></td>
+          <td>{{ player.name }}</td>
+          <td>{{ player.contract_terms }}</td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.aav_sixteen_seventeen }}</td>
+          <td>{{ player.aav_seventeen_eighteen }}</td>
+          <td>{{ player.aav_eighteen_nineteen }}</td>
+        </tr>
+        <tr>
+          <td>{{}}</td>
+          <td>Roster Total: {{ trade.teamRosterOne }}</td>
+          <td>{{}}</td>
+          <td>{{}}</td>
+          <td>Salary total: {{ trade.teamSalaryOne }}</td>
+          <td>{{}}</td>
+          <td>{{}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<table>
-<thead>
-  <tr>
-    <th>Player Name</th>
-    <th>Contract Terms</th>
-    <th>Position</th>
-    <th>2016-2017 AAV</th>
-    <th>2017-2018 AAV</th>
-    <th>2018-2019 AAV</th>
-  </tr>
-</thead>
-<tbody>
-  <tr class='player' ng-repeat='player in trade.tradePlayers'>
-    <td>{{ player.name }}</td>
-    <td>{{ player.contract_terms }}</td>
-    <td>{{ player.position }}</td>
-    <td>{{ player.AAV_sixteen_seventeen }}</td>
-    <td>{{ player.AAV_seventeen_eighteen }}</td>
-    <td>{{ player.AAV_eighteen_nineteen }}</td>
-  </tr>
-</tbody>
-</div>
+  <div class="col-md-6">
+    <select ng-model="trade.teamTwo" ng-options="teams.name for teams in trade.teams" ng-change="trade.getPlayerTwo()">
+      <option value="">Select a Team</option>
+    </select>
+  </div>
 
-<div class="col-md-6">
-  <select ng-model="teamTwo" ng-options="teams.name for teams in trade.teams" ng-change=>
-  </select>
-</div>
-
-<table>
-<thead>
-  <tr>
-    <th>Player Name</th>
-    <th>Contract Terms</th>
-    <th>Position</th>
-    <th>2016-2017 AAV</th>
-    <th>2017-2018 AAV</th>
-    <th>2018-2019 AAV</th>
-  </tr>
-</thead>
-<tbody>
-  <tr class='player' ng-repeat='player in trade.tradePlayers'>
-    <td>{{ player.name }}</td>
-    <td>{{ player.contract_terms }}</td>
-    <td>{{ player.position }}</td>
-    <td>{{ player.AAV_sixteen_seventeen }}</td>
-    <td>{{ player.AAV_seventeen_eighteen }}</td>
-    <td>{{ player.AAV_eighteen_nineteen }}</td>
-  </tr>
-</tbody>
+  <table>
+    <thead>
+      <tr>
+        <th>Select for Trade</th>
+        <th>Player Name</th>
+        <th>Contract Terms</th>
+        <th>Position</th>
+        <th>2016-2017 AAV</th>
+        <th>2017-2018 AAV</th>
+        <th>2018-2019 AAV</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='player' ng-repeat='player in trade.playersTwo'>
+        <td><input type="checkbox" ng-model="player.onBlock" ng-change="trade.pushToTrade()"></td>
+        <td>{{ player.name }}</td>
+        <td>{{ player.contract_terms }}</td>
+        <td>{{ player.position }}</td>
+        <td>{{ player.aav_sixteen_seventeen }}</td>
+        <td>{{ player.aav_seventeen_eighteen }}</td>
+        <td>{{ player.aav_eighteen_nineteen }}</td>
+      </tr>
+      <tr>
+        <td>{{}}</td>
+        <td>Roster Total: {{ trade.teamRosterTwo }}</td>
+        <td>{{}}</td>
+        <td>{{}}</td>
+        <td>Salary Total: {{ trade.teamSalaryTwo }}</td>
+        <td>{{}}</td>
+        <td>{{}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="block">
+    <table>
+      <tr>
+        <th>Trading Block</th>
+      </tr>
+      <tr class="player" ng-repeat="player in trade.tradeBlock">
+        <td>{{ player.name }}</td>
+      </tr>
+    </table>
+    <button class="submit" ng-click="trade.makeTrade()">Make Trade</button>
+  </div>
 </div>

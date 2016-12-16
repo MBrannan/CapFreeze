@@ -5,6 +5,7 @@ var connectionString = 'postgres://localhost:5432/CapFreeze';
 
 router.get('/:teamId', function(req, res) {
   var teamId = req.params.teamId;
+  console.log("team ID: ", teamId);
   console.log('factory request initialized');
 
   pg.connect(connectionString, function(err, client, done) {
@@ -14,7 +15,7 @@ router.get('/:teamId', function(req, res) {
     }
 
   client.query(
-    'Select name, contract_terms, position, player.AAV_sixteen_seventeen, player.AAV_seventeen_eighteen,player.AAV_eighteen_nineteen FROM players WHERE team_id = $1;', [teamId], function(err, result) {
+    'SELECT players.name, players.contract_terms, players.position, players.aav_sixteen_seventeen, players.aav_seventeen_eighteen, players.aav_eighteen_nineteen FROM players WHERE team_id = $1;', [teamId], function(err, result) {
       done();
 
       if(err) {

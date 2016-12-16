@@ -11,8 +11,17 @@ myApp.factory('teamFactory', ['$http', function($http) {
       });
   };
 
-  function getPlayers() {
-    var teamId = 15;
+  function getPlayerOne(teamId) {
+    console.log('team ID: ', teamId);
+    return $http.get('/players/' + teamId)
+      .then(function(response) {
+        players = response.data;
+        return players
+      });
+  };
+
+  function getPlayerTwo(teamId) {
+    console.log('team ID: ', teamId);
     return $http.get('/players/' + teamId)
       .then(function(response) {
         players = response.data;
@@ -20,11 +29,14 @@ myApp.factory('teamFactory', ['$http', function($http) {
       });
   };
   return {
-    getInfo: function() {
+    getTeamInfo: function() {
       return getTeams();
     },
-    getPlayerInfo: function() {
-      return getPlayers();
+    getPlayerInfoOne: function(teamId) {
+      return getPlayerOne(teamId);
+    },
+    getPlayerInfoTwo: function(teamId) {
+      return getPlayerTwo(teamId);
     }
   };
 }]);
