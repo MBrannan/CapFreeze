@@ -1,0 +1,37 @@
+<div class="ducks">
+  <img src="../../images/ducks.png"/>
+  <table align="center">
+  <thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Contract Terms</th>
+      <th>Position</th>
+      <th>Status</th>
+      <th>Age</th>
+      <th>2016-2017 AAV</th>
+      <th>2017-2018 AAV</th>
+      <th>2018-2019 AAV</th>
+      <th>2019-2020 AAV</th>
+      <th>2020-2021 AAV</th>
+      <th>2021-2022 AAV</th>
+      <th>2022-2023 AAV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class='player' ng-repeat='player in ducks.ducksPlayers'>
+      <td>{{ player.name }}</td>
+      <td>{{ player.contract_terms }}</td>
+      <td>{{ player.position }}</td>
+      <td>{{ player.status }}</td>
+      <td>{{ player.age }}</td>
+      <td>{{ player.aav_sixteen_seventeen }}</td>
+      <td>{{ player.aav_seventeen_eighteen }}</td>
+      <td>{{ player.aav_eighteen_nineteen }}</td>
+      <td>{{player.aav_nineteen_twenty}}</td>
+      <td>{{player.aav_twenty_twentyone}}</td>
+      <td>{{player.aav_twentyone_twentytwo}}</td>
+      <td>{{player.aav_twentytwo_twentythree}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

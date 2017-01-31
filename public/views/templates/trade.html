@@ -81,13 +81,17 @@
   </table>
   <div class="block">
     <table>
-      <tr>
-        <th>Trading Block</th>
-      </tr>
-      <tr class="player" ng-repeat="player in trade.tradeBlock">
-        <td>{{ player.name }}</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Trading Block</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="player" ng-repeat="player in trade.tradeBlock">
+          <td>{{ player.name }}</td>
+        </tr>
+      </tbody>
     </table>
-    <button class="submit" ng-click="trade.makeTrade()">Make Trade</button>
+    <button class="button" ng-click="trade.makeTrade()">Make Trade</button>
   </div>
 </div>

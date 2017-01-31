@@ -2,7 +2,6 @@ myApp.controller('TradeController', ['$scope', 'teamFactory', function($scope, t
 
   var self = this;
   self.tradeBlock = [];
-  self.salaryCap = 73000000;
   self.teams = null;
   self.playersOne = [];
   self.playersTwo = [];
@@ -90,20 +89,21 @@ myApp.controller('TradeController', ['$scope', 'teamFactory', function($scope, t
   }
 
   self.makeTrade = function() {
-    console.log("click");
-    //   for (var i = 0; i < self.tradeBlock.length; i++) {
-    //   if (self.tradeBlock[i].contract_terms == "NMC" || self.tradeBlock[i].contract_terms == "NTC") {
-    //     alert("You cannot trade a player with a No Move Clause or a No Trade Clause.")
-    //   } else if (self.teamSalaryTwo > salaryCap || self.teamSalaryOne > salaryCap) {
-    //     alert("You cannot make a trade that puts a team over the salary cap.")
-    //   } else if (self.teamRosterTwo < 20 || self.teamRosterOne < 20) {
-    //     alert("You must have a minimum of 20 skaters on each team.")
-    //   }
-    // }
-  }
-
-  self.clickTest = function() {
-    console.log('potato');
+      for (var i = 0; i < self.tradeBlock.length; i++) {
+      if (self.tradeBlock[i].contract_terms == "NMC" || self.tradeBlock[i].contract_terms == "NTC" || self.tradeBlock[i].contract_terms == "M-NTCNMC") {
+        alert("You cannot trade a player with a No Move Clause or a No Trade Clause.")
+        return;
+      } else if (self.teamSalary16One + self.tradeBlock.aav_sixteen_seventeen > 73000000 || self.tradeBlock.aav_sixteen_seventeen + self.teamSalary16Two > 73000000) {
+        alert("You cannot make a trade that puts a team over the salary cap.")
+        return;
+      } else if (self.teamRosterTwo - self.tradeBlock[i] < 20 || self.teamRosterOne - self.tradeBlock[i] < 20) {
+        alert("You must have a minimum of 20 skaters on each team.")
+        return;
+      } else {
+        alert("This trade is successful!")
+        return;
+      }
+    }
   }
 
 }]);

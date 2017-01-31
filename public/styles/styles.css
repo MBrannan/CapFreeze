@@ -1,46 +1,33 @@
-h2 {
+h1 {
   color: #368BC1;
   text-align: center;
 }
 
-.home img {
-  position: absolute;
-  margin-top: 40px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
+h2 {
+  text-align: center;
 }
 
-.lightning img {
-  position: absolute;
-  margin-top: 40px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0.15;
+h3 {
+  text-align: center;
 }
 
-.trade img {
-  position: absolute;
-  margin-top: 40px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0.15;
+h5 {
+  text-align: justify;
 }
 
-.wild img {
+strong {
+  color: blue;
+}
+
+img {
   position: absolute;
   margin-top: 40px;
   left: 0;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 0.15;
+  z-index: -100
 }
 
 nav {
@@ -63,7 +50,7 @@ th {
 }
 
 td {
-  opacity: 0.8;
+  font-weight: bold;
   text-align: center;
   border: 1px solid black;
 }
@@ -74,6 +61,171 @@ table {
   align-content: center;
 }
 
-#tradeExecute {
+.button {
   background-color: #368BC1;
+}
+
+#atlantic {
+  border: 200px;
+}
+
+#metropolitan {
+  border: 300px;
+}
+
+#central {
+  border: 300px;
+}
+
+#pacific {
+  border: 300px;
+}
+
+#ducksButton {
+  background: linear-gradient(to right, #FC4C02, #85714D, #010101);
+  color: #010101;
+}
+
+#coyotesButton {
+  background-color: #862633;
+  color: #DDCBA4
+}
+
+#bruinsButton {
+  background-color: #010101;
+  color: #FFB81C
+}
+
+#sabresButton {
+  background: linear-gradient(to right, #041E42, #A2AAAD);
+  color: #FFB81C
+}
+
+#flamesButton {
+  background: linear-gradient(to right, #FDBF12, #CB0D0D);
+  color: #010101
+}
+
+#hurricanesButton {
+  background: linear-gradient(to right, #010101, #C8102E);
+  color: #FFFFFF;
+}
+
+#blackhawksButton {
+  background: linear-gradient(to right, #C8102E, #FFFFFF);
+  color: #010101
+}
+
+#avalancheButton {
+  background: linear-gradient(to right, #236192, #6F263D);
+  color: #A4A9AD
+}
+
+#jacketsButton {
+  background: linear-gradient(to right, #002147, #C60C30);
+  color: #A4A9AD;
+}
+
+#starsButton {
+  background-color: #006341;
+  color: #010101
+}
+
+#redWingsButton {
+  background-color: #C8102E;
+  color: #FFFFFF
+}
+
+#oilersButton {
+  background: linear-gradient(to right, #00205B, #CF4520);
+  color: #FFFFFF
+}
+
+#panthersButton {
+  background: linear-gradient(to right, #041E42, #C8102E);
+  color: #B9975B
+}
+
+#kingsButton {
+  background-color: #010101;
+  color: #A2AAAD
+}
+
+#wildButton {
+  background-color: #004F30;
+  color: #EEE3C7
+}
+
+#canadiensButton {
+  background: linear-gradient(to right, #C51230, #083A81);
+  color: #FFFFFF
+}
+
+#predsButton {
+  background-color: #FFB81C;
+  color: #041E42
+}
+
+#devilsButton {
+  background-color: #C8102E;
+  color: #010101
+}
+
+#islandersButton {
+  background-color: #003087;
+  color: #FC4C02
+}
+
+#rangersButton {
+  background: linear-gradient(to right, #0161AB, #E51837);
+  color: #FFFFFF
+}
+
+#senatorsButton {
+  background: linear-gradient(to right, #E51837, #D4A00F, #000000);
+  color: #FFFFFF
+}
+
+#flyersButton {
+  background: linear-gradient(to right, #010101, #FA4616);
+  color: #FFFFFF;
+}
+
+#penguinsButton {
+  background: linear-gradient(to right, #FFB81C, #010101);
+  color: #FFFFFF
+}
+
+#sharksButton {
+  background-color: #006272;
+  color: #010101;
+}
+
+#bluesButton {
+  background: linear-gradient(to right, #002D62, #00529C, #FDB930);
+  color: #FFFFFF
+}
+#lightningButton {
+  background-color: #00205B;
+  color: #FFFFFF;
+}
+
+#leafsButton {
+  background-color: #134A8E;
+  color: #FFFFFF;
+}
+
+#canucksButton {
+  background: linear-gradient(to right, #003E7E, #008852);
+  color: #FFFFFF
+}
+
+#capitalsButton {
+  background: linear-gradient(to right, #041E42, #A6192E);
+  color: #FFFFFF
+}
+
+#jetsButton {
+  background: linear-gradient(to right, #006EC8, #002D62, #C8102E);
+  color: #A2AAAD
 }
